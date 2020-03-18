@@ -1,0 +1,5 @@
+/* pages/welcome/welcome.wxss */
+.container_img{
+  width: 200rpx;
+  height: 200rpx;
+}

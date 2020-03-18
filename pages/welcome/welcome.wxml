@@ -1,0 +1,7 @@
+<view class="container">
+  <image class="container_img" mode="widthFix" src="../../images/3.png"></image>
+  <text selectable>Hello,极致Awake!</text>
+  <view>
+    <text selectable>开始微信小程序之旅！</text>
+  </view>
+</view>
