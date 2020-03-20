@@ -15,7 +15,8 @@
 }
 
 .user_name {
-  font-size: 32rpx;
+  margin-top: 120rpx;
+  font-size: 36rpx;
   font-weight: bold;
 }
 

@@ -1,4 +1,6 @@
 <!--pages/posts/posts.wxml-->
+<!-- 导入模板WXML -->
+<import src="post-item/post-item-template.wxml" />
 <view>
   <swiper autoplay indicator-dots interval="3000" circular>
     <swiper-item>
@@ -12,22 +14,11 @@
     </swiper-item>
   </swiper>
   <!-- 列表渲染 -->
-<block wx:for="{{post_key}}" wx:key="id">
-  <view class="post_container">
-    <view class="post_author_date">
-      <image class="post_author" src="{{item.avatar}}"></image>
-      <text class="post_date">{{item.date}}</text>
+  <block wx:for="{{post_key}}" wx:key="id">
+    <!-- ...可以展开数据，直接调用 不用写item -->
+    <view catchtap="onPostTap" data-postId="{{item.postId}}">
+      <template is="postItem" data="{{...item}}" />
     </view>
-    <text class="post_title">{{item.title}}</text>
-    <image class="post_image" src="{{item.imgSrc}}"></image>
-    <text class="post_content">{{item.content}}</text>
-    <view class="post_like">
-      <image class="post_like_image" src="../../images/icon/chat.png"></image>
-      <text class="post_like_font">{{item.reading}}</text>
-      <image class="post_like_image" src="../../images/icon/view.png"></image>
-      <text class="post_like_font">{{item.collection}}</text>
-    </view>
-  </view>
-</block>
+  </block>
 
 </view>
